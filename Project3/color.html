@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 100vh;
+            background-image: url('bg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        main {
+            min-height: 150vh;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main></main>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        const $doc = $(document);
+        const $header = $('header');
+        const $main = $('main');
+
+        $doc.on('scroll', function () {
+            // console.log("scroluje")
+            // aktualna pozycja scrolla
+            const scrollPos = $doc.scrollTop();
+
+            // gdzie(ile px) jest dany element od początku strony- bierzemy maina bo to on ma się pokazywac względem scrolla
+
+            const sectionOffset = $main.offset().top;
+            // console.log(sectionOffset)
+
+            // jaka jest wysokosc elementu- chodzi o header
+            const headerHeight = $header.outerHeight();
+
+            if (scrollPos < sectionOffset) {
+                $header.css({
+                    'opacity': 1 - scrollPos / headerHeight,
+                    'filter': 'grayscale(' + 2 * scrollPos / headerHeight + ')'
+                })
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

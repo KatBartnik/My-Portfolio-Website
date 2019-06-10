@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Katarzyna Bartnik - Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="welcome">
+      <p>Welcome</p>
+      <h1>I'm Katarzyna Bartnik</h1>
+      <h2>Front end web developer</h2>
+      <button id="click">Let's see my portfolio</button>
+    </div>
+    <img src="images/photo1.png" alt="Photo Katarzyna Bartnik">
+  </header>
+  <section class="features clearfix">
+    <h1>Professionally created websites</h1>
+    <div class="feature">
+      <img src="images/services1.png" alt="logo html js i css">
+      <h2>Modern standard compliant</h2>
+      <p class="description"> HTML5 and CSS3 are both evolving versions and they have been successfully moulding the
+        things just the way them to be. To make the websites more interactive- JavaScript/JQuery allows it to do.</p>
+    </div>
+    <div class="feature">
+      <img src="images/services2.png" alt="logo html js i css">
+      <h2>Optimised for search engine</h2>
+      <p class="description">Search engine optimization (SEO) is the art and science of getting pages to rank higher in
+        search engines such as Google. Because search is one of the main ways in which people discover content online,
+        ranking higher in search engines can lead to an increase in traffic to a website.</p>
+    </div>
+    <div class="feature">
+      <img src="images/services3.png" alt="logo html js i css">
+      <h2>Mobile-friendly web design</h2>
+      <p class="description">Around 94% of people judge websites on the basis of responsive web design. That's why
+        designing a website for smartphones, tablets and mobile devices is my priority.</p>
+    </div>
+
+  </section>
+  <section class="portfolio" id="elementtoScrollToID">
+    <h1>My latest projects</h1>
+    <div class="project clearfix">
+      <div class="web">
+        <a href="Project2/baner.html">
+        <img src="images/portfolio2.jpg" alt="portfolio example 2"></a>
+      </div>
+      <div class="about">
+        <a href="Project2/baner.html"><h2>Slider project</h2></a>
+        <p>The showcased technique is transition animation between images done with CSS keyframes.</p>
+      </div>
+    </div>
+    <div class="project clearfix">
+      <div class="web">
+        <a href="Project3/color.html">
+        <img src="images/portfolio3.jpg" alt="portfolio example 3"></a>
+      </div>
+      <div class="about">
+        <a href="Project3/color.html"><h2>Colors and shadows</h2></a>
+        <p>Smooth website scroller made using JQuery. Additionally implemented fixed-position (CSS property).</p>
+      </div>
+    </div>
+    <div class="project clearfix">
+      <div class="web">
+        <a href="Project4/pong.html">
+        <img src="images/portfolio4.jpg" alt="portfolio przykład 4"></a>
+      </div>
+      <div class="about">
+        <a href="Project4/pong.html"><h2>Pong animated game</h2></a>
+        <p>Showcased techniques:</p>
+        <p> - CSS variables</p>
+        <p>- simple animation in CSS</p>
+        <p>- keyframes</p>
+      </div>
+    </div>
+  </section>
+  <section class="slogan">
+    <div class="bg">
+      <h1>My motto</h1>
+      <p class="text">"The only way to do great work is to love what you do"
+      </p>
+      <p class="author">Steve Jobs</p>
+    </div>
+  </section>
+
+  <section class="hobby clearfix">
+    <h1>My hobbies</h1>
+    <div class="item">
+      <p>Yoga</p>
+    </div>
+    <div class="item">
+      <p>Music composing</p>
+    </div>
+    <div class="item">
+      <p>Changing the world</p>
+    </div>
+    <div class="item">
+      <p>Eating delicious things</p>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <h1>Contact me</h1>
+    <div class="wrap clearfix">
+      <div class="socials">
+        <div class="social clearfix">
+          <a href="mailto:katarzynabartnik88@gmail.com?subject=subject"><img src="images/contact1.png" alt="contact email"><span>@katbartnik</span></a>
+        </div>
+        <div class="social clearfix"><img src="images/contact2.png" alt="contact phone number"><span>07949 645835</span>
+        </div>
+        <div class="social clearfix">
+          <a href="https://www.facebook.com/katarzyna.bartnik.5"><img src="images/contact3.png" alt="facebook"><span>kat.bartnik.5</span></a>
+        </div>
+        <div class="social clearfix">
+          <a href="https://www.linkedin.com/in/katarzyna-bartnik-263417158/"><img src="images/contact5.png"
+            alt="linkedin"><span>katbartnik</span></a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <footer>&copy; Katarzyna Bartnik</footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    $('#click').on('click', function () {
+      $('body, html').animate({
+        scrollTop: $('#elementtoScrollToID').offset().top
+      }, 500)
+    })
+
+  </script>
+</body>
+
+</html>
